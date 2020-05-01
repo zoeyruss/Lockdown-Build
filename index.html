@@ -13,12 +13,22 @@
 			type="text/javascript"
 			src="lockdown-build.js"
 		></script>
+		<script
+			language="javascript"
+			type="text/javascript"
+			src="numbers-build.js"
+		></script>
 
 		<style>
+			html {
+				overflow: hidden;
+			}
+
 			body {
 				padding: 0;
 				margin: 0;
 			}
+
 			@font-face {
 				font-family: sharp;
 				src: url(fonts/sharp.otf);
@@ -26,5 +36,54 @@
 		</style>
 	</head>
 
-	<body></body>
+	<body>
+		<span
+			class="circle"
+			style="
+				background-color: transparent;
+				transform: translateX(490px) translateY(871.5px);
+			"
+		></span>
+		<script>
+			var $circle = document.querySelector(".circle");
+
+			IS.create({
+				onInit: ({ author, title, width, height, state }) => {
+					$circle.style.backgroundColor = state ? "black" : "transparent";
+				},
+				onChangeState: (state) => {
+					$circle.style.backgroundColor = state ? "black" : "transparent";
+				},
+				onResize: ({ width, height }) => {
+					// do something on resize
+				},
+				onTick: ({
+					x,
+					y,
+					width,
+					height,
+					isPointerInside,
+					state,
+					timestamp,
+				}) => {
+					$circle.style.transform = `translateX(${x}px) translateY(${y}px)`;
+				},
+
+				},
+			});
+		</script>
+		<div
+			style="
+				position: fixed;
+				bottom: 0px;
+				padding: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+			"
+		>
+			<button disabled="true" style="padding: 20px; font-size: 20px;">
+				BEFORE</button
+			><button style="padding: 20px; font-size: 20px;">AFTER</button>
+		</div>
+	</body>
 </html>
