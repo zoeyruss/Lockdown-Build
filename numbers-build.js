@@ -11,15 +11,15 @@ let C3Pos = K4Pos - 40;
 let O2Pos = C3Pos - 40;
 let L1Pos = O2Pos - 40;
 
-let L1 = "L";
-let O2 = "O";
-let C3 = "C";
-let K4 = "K";
-let D5 = "D";
-let O5 = "O";
-let W6 = "W";
-let N7 = "N";
-let Dash8 = "–";
+let L1 = "1";
+let O2 = "2";
+let C3 = "3";
+let K4 = "4";
+let D5 = "5";
+let O5 = "6";
+let W6 = "7";
+let N7 = "8";
+let Dash8 = "9";
 
 /* Controls amount of letter forms around circle*/
 let amountDash8 = 90;
