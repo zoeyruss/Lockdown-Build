@@ -26,7 +26,6 @@
 
 			body {
 				padding: 0;
-				overflow: hidden;
 				margin: 0;
 			}
 
@@ -66,11 +65,7 @@
 					isPointerInside,
 					state,
 					timestamp,
-				}) => {
-					$circle.style.transform = `translateX(${x}px) translateY(${y}px)`;
-				},
-
-				},
+				}) => {},
 			});
 		</script>
 		<div
@@ -81,10 +76,11 @@
 				left: 50%;
 				transform: translateX(-50%);
 			"
-		>
-			<button disabled="true" style="padding: 20px; font-size: 20px;">
-				BEFORE</button
-			><button style="padding: 20px; font-size: 20px;">AFTER</button>
-		</div>
+		></div>
+		<script>
+			IS.create({ onInit: () => Ir.init(), 
+				onChangeState: t => Ir.invert(t), 
+				onResize: ({ width: t, height: e }) => Ir.resize(t, e), onTick: () => Ir.tick() })}]);
+		</script>
 	</body>
 </html>
