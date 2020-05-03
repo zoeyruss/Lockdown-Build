@@ -35,14 +35,13 @@ let Pos1 = Pos2 - 55;
 /* Controls amount of letter forms around circle*/
 let amountDashnine = 90;
 let amountN8 = amountDashnine / 1.5;
-let amountW7 = amountN8 / 1.33;
-let amountO6 = amountW7 / 1.25;
-let amountD5 = amountO6 / 1.2;
-let amountK4 = amountD5 / 1.17;
-let amountC3 = amountK4 / 1.14;
-let amountO2 = amountC3 / 1.12;
-let amountL1 = amountO2 / 1.11;
-
+let amountW7 = amountDashnine / 2;
+let amountO6 = amountDashnine / 2.5;
+let amountD5 = amountDashnine / 3;
+let amountK4 = amountDashnine / 3.5;
+let amountC3 = amountDashnine / 4;
+let amountO2 = amountDashnine / 4.5;
+let amountL1 = amountDashnine / 5;
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	colorMode(HSB);

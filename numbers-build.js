@@ -1,16 +1,17 @@
+
 /* Letter forms Varible*/
-var L1 = "12";
-var L2 = "11";
-var L3 = "10";
-var L4 = "9";
-var L5 = "8";
-var L6 = "7";
-var L7 = "6";
-var L8 = "5";
-var L9 = "4";
-var L10 = "3";
-var L11 = "2";
-var L12 = "1";
+var L12 = "12";
+var L11 = "11";
+var L10 = "10";
+var L9 = "9";
+var L8 = "8";
+var L7 = "7";
+var L6 = "6";
+var L5 = "5";
+var L4 = "4";
+var L3 = "3";
+var L2 = "2";
+var L1 = "1";
 
 let myFont;
 let angle = 0;
@@ -28,35 +29,35 @@ let angle11 = 0;
 let angle12 = 0;
 
 /* Controls Postion  of Letters*/
-let Pos12 = 0;
-let Pos11 = Pos12 - 40;
-let Pos10 = Pos11 - 40;
-let Pos9 = Pos10 - 40;
-let Pos8 = Pos9 - 40;
-let Pos7 = Pos8 - 40;
-let Pos6 = Pos7 - 40;
-let Pos5 = Pos6 - 40;
-let Pos4 = Pos5 - 40;
-let Pos3 = Pos4 - 40;
-let Pos2 = Pos3 - 40;
-let Pos1 = Pos2 - 40;
+let Pos1 = 0;
+let Pos2 = Pos1 - 40;
+let Pos3 = Pos2 - 40;
+let Pos4 = Pos3 - 40;
+let Pos5 = Pos4 - 40;
+let Pos6 = Pos5 - 40;
+let Pos7 = Pos6 - 40;
+let Pos8 = Pos7 - 40;
+let Pos9 = Pos8 - 40;
+let Pos10 = Pos9 - 40;
+let Pos11 = Pos10 - 40;
+let Pos12 = Pos11 - 40;
 
 
 
 
 /* Controls amount of letter forms around circle*/
-let amountL12 = 90;
-let amountL11 = amountL12 / 1.5;
-let amountL10 = amountL11 / 1.33;
-let amountL9 = amountL10 / 1.25;
-let amountL8 = amountL9 / 1.2;
-let amountL7 = amountL8 / 1.17;
-let amountL6 = amountL7 / 1.14;
-let amountL5 = amountL6 / 1.12;
-let amountL4 = amountL5 / 1.11;
-let amountL3 = amountL5 / 1.22;
-let amountL2 = amountL5 / 1.33;
-let amountL1 = amountL5 / 1.44;
+let amountL1 = 90;
+let amountL2 = amountL1 / 1.5;
+let amountL3 = amountL1 / 2;
+let amountL4 = amountL1 / 2.5;
+let amountL5 = amountL1 / 3;
+let amountL6 = amountL1 / 3.5;
+let amountL7 = amountL1 / 4;
+let amountL8 = amountL1 / 4.5;
+let amountL9 = amountL1 / 5;
+let amountL10 = amountL1 / 5.5;
+let amountL11 = amountL1 / 6;
+let amountL12 = amountL1 / 6.5;
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
@@ -71,8 +72,8 @@ function draw() {
     background(0);
     fill(255);
 								
-    /* Open 1 Group*/
-    for (let i = 1; i < 360; i += amountL12) {
+    /* Open Number 1 Group*/
+    for (let i = 1; i < 360; i += amountL1) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -87,14 +88,14 @@ function draw() {
         /* test rotate letter upward*/
         rotate(190);
         /*60 push out*/
-        text(L12, 0, Pos12);
+        text(L1, 0, Pos1);
         pop();
         pop();
     }
-    /* Close 1 Group*/
+    /* Close Number 1 Group*/
 
-    /* Open 2 Group*/
-    for (let i = 0; i < 360; i += amountL11) {
+    /* Open Number 2 Group*/
+    for (let i = 0; i < 360; i += amountL2) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -109,15 +110,14 @@ function draw() {
         /* test rotate letter upward*/
         rotate(189);
         /*60 push out*/
-        text(L11, 0, Pos11);
+        text(L2, 0, Pos2);
         pop();
         pop();
     }
-    /* Close 2 Group*/
+    /* Close Number 2 Group*/
 
-    /* Open 3 Group*/
-
-    for (let i = 0; i < 360; i += amountL10) {
+    /* Open Number 3 Group*/
+    for (let i = 0; i < 360; i += amountL3) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -133,14 +133,14 @@ function draw() {
         /* test rotate letter upward*/
         rotate(49);
         /*60 push out*/
-        text(L10, 0, Pos10);
+        text(L3, 0, Pos3);
         pop();
         pop();
     }
     /* Close 3 Group*/
 
     /* Open 4 Group*/
-    for (let i = 0; i < 360; i += amountL9) {
+    for (let i = 0; i < 360; i += amountL4) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -156,14 +156,14 @@ function draw() {
         /* test rotate letter upward*/
         rotate(90);
         /*60 push out*/
-        text(L9, 0, Pos9);
+        text(L4, 0, Pos4);
         pop();
         pop();
     }
     /* Close 4 Group*/
 
     /* Open 5 Group*/
-    for (let i = 0; i < 360; i += amountL8) {
+    for (let i = 0; i < 360; i += amountL5) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -179,14 +179,14 @@ function draw() {
         /* test rotate letter upward*/
 
         /*60 push out*/
-        text(L8, 0, Pos8);
+        text(L5, 0, Pos5);
         pop();
         pop();
     }
     /* Close 5 Group*/
 
     /* Open 6 Group*/
-    for (let i = 0; i < 360; i += amountL7) {
+    for (let i = 0; i < 360; i += amountL6) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -202,14 +202,14 @@ function draw() {
         /* test rotate letter upward*/
 
         /*60 push out*/
-        text(L7, 0, Pos7);
+        text(L6, 0, Pos6);
         pop();
         pop();
     }
     /* Close 6 Group*/
 
     /* Open 7 Group*/
-    for (let i = 0; i < 360; i += amountL6) {
+    for (let i = 0; i < 360; i += amountL7) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -225,14 +225,14 @@ function draw() {
         /* test rotate letter upward*/
 
         /*60 push out*/
-        text(L6, 0, Pos6);
+        text(L7, 0, Pos7);
         pop();
         pop();
     }
     /* Close 7 Group*/
 
     /* Open  Group*/
-    for (let i = 0; i < 360; i += amountL5) {
+    for (let i = 0; i < 360; i += amountL8) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -248,14 +248,14 @@ function draw() {
         /* test rotate letter upward*/
 
         /*60 push out*/
-        text(L5, 0, Pos5);
+        text(L8, 0, Pos8);
         pop();
         pop();
     }
     /* Close O Group*/
 
     /* Open 9 Group*/
-    for (let i = 0; i < 360; i += amountL4) {
+    for (let i = 0; i < 360; i += amountL9) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -271,7 +271,7 @@ function draw() {
         /* test rotate letter upward*/
 
         /*60 push out*/
-        text(L4, 0, Pos4);
+        text(L9, 0, Pos9);
 
         pop();
 
@@ -279,7 +279,7 @@ function draw() {
     }
     /* Close 9 Group*/
     /* Open 1O Group*/
-    for (let i = 0; i < 360; i += amountL3) {
+    for (let i = 0; i < 360; i += amountL10) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -295,7 +295,7 @@ function draw() {
         /* test rotate letter upward*/
 
         /*60 push out*/
-        text(L3, 0, Pos3);
+        text(L10, 0, Pos10);
 
         pop();
 
@@ -303,7 +303,7 @@ function draw() {
     }
     /* Close 1O Group*/
     /* Open 11 Group*/
-    for (let i = 0; i < 360; i += amountL2) {
+    for (let i = 0; i < 360; i += amountL11) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -319,7 +319,7 @@ function draw() {
         /* test rotate letter upward*/
 
         /*60 push out*/
-        text(L2, 0, Pos2);
+        text(L11, 0, Pos11);
 
         pop();
 
@@ -327,7 +327,7 @@ function draw() {
     }
     /* Close 11 Group*/
     /* Open 12 Group*/
-    for (let i = 0; i < 360; i += amountL1) {
+    for (let i = 0; i < 360; i += amountL12) {
         push();
         /* center on canvas*/
         translate(width / 2, height / 2);
@@ -336,13 +336,11 @@ function draw() {
         /* rotate on click*/
         rotate(angle11);
         push();
-
         rotate(89.55);
         /* test rotate letter upward*/
         translate(0, 0);
         /* test rotate letter upward*/
-
-        text(L1, 0, Pos1);
+        text(L12, 0, Pos12);
 
         pop();
 
@@ -369,4 +367,3 @@ function draw() {
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
 }
-
