@@ -1,3 +1,13 @@
+var L1 = "L";
+var O2 = "O";
+var C3 = "C";
+var K4 = "K";
+var D5 = "D";
+var O6 = "O";
+var W7 = "W";
+var N8 = "N";
+var Dashnine = "-";
+
 let myFont;
 let angle = 0;
 let angle1 = 0;
@@ -21,15 +31,6 @@ let Pos2 = Pos3 - 55;
 let Pos1 = Pos2 - 55;
 
 
-let L1 = "L";
-let O2 = "O";
-let C3 = "C";
-let K4 = "K";
-let D5 = "D";
-let O6 = "O";
-let W7 = "W";
-let N8 = "N";
-let Dashnine = "-";
 
 /* Controls amount of letter forms around circle*/
 let amountDashnine = 90;
@@ -259,7 +260,7 @@ function draw() {
 										pop();
 									}
 									/* Close L Group*/
-									if (mouseX > 700) {
+									if (mouseX > 800) {
 										angle = angle + 0.09;
 										angle1 = angle1 + 0.08;
 										angle2 = angle2 + 0.07;

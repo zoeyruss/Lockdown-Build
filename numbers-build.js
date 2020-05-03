@@ -1,3 +1,17 @@
+/* Letter forms Varible*/
+var L1 = "12";
+var L2 = "11";
+var L3 = "10";
+var L4 = "9";
+var L5 = "8";
+var L6 = "7";
+var L7 = "6";
+var L8 = "5";
+var L9 = "4";
+var L10 = "3";
+var L11 = "2";
+var L12 = "1";
+
 let myFont;
 let angle = 0;
 let angle1 = 0;
@@ -27,18 +41,7 @@ let Pos3 = Pos4 - 40;
 let Pos2 = Pos3 - 40;
 let Pos1 = Pos2 - 40;
 
-let L1 = "12";
-let L2 = "11";
-let L3 = "10";
-let L4 = "9";
-let L5 = "8";
-let L6 = "7";
-let L7 = "6";
-let L8 = "5";
-let L9 = "4";
-let L10 = "3";
-let L11 = "2";
-let L12 = "1";
+
 
 
 /* Controls amount of letter forms around circle*/
@@ -59,7 +62,8 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 	colorMode(HSB);
 	textFont("sharp");
-	textSize(40);
+    textSize(40);
+  frameRate(30);
 	textAlign(CENTER, CENTER);
 }
 
@@ -258,7 +262,7 @@ function draw() {
         /* rotate Letters around circle*/
         rotate(radians(i));
         /* rotate on click*/
-        rotate(angle9);
+        rotate(angle8);
         push();
 
         rotate(89.55);
@@ -282,7 +286,7 @@ function draw() {
         /* rotate Letters around circle*/
         rotate(radians(i));
         /* rotate on click*/
-        rotate(angle10);
+        rotate(angle9);
         push();
 
         rotate(89.55);
@@ -306,7 +310,7 @@ function draw() {
         /* rotate Letters around circle*/
         rotate(radians(i));
         /* rotate on click*/
-        rotate(angle11);
+        rotate(angle10);
         push();
 
         rotate(89.55);
@@ -330,7 +334,7 @@ function draw() {
         /* rotate Letters around circle*/
         rotate(radians(i));
         /* rotate on click*/
-        rotate(angle12);
+        rotate(angle11);
         push();
 
         rotate(89.55);
@@ -344,20 +348,20 @@ function draw() {
 
         pop();
     } /* Close 12 Group*/
-    if (mouseX > 700) {
-        angle = angle + 0.118;
-        angle1 = angle1 + 0.115;
-        angle2 = angle2 + 0.11;
-        angle3 = angle3 + 0.1;
-        angle4 = angle4 + 0.09;
-        angle5 = angle5 + 0.08;
-        angle6 = angle6 + 0.07;
-        angle7 = angle7 + 0.06;
-        angle8 = angle8 + 0.05;
-        angle9 = angle9 + 0.04;
-        angle10 = angle10 + 0.03;
-        angle11 = angle11 + 0.02;
-        angle12 = angle12 + 0.01;
+    if (mouseX > 800) {
+        angle = angle + 0.;
+        angle1 = angle1 + 0.15;
+        angle2 = angle2 + 0.1;
+        angle3 = angle3 + 0.09;
+        angle4 = angle4 + 0.08;
+        angle5 = angle5 + 0.07;
+        angle6 = angle6 + 0.06;
+        angle7 = angle7 + 0.05;
+        angle8 = angle8 + 0.04;
+        angle9 = angle9 + 0.03;
+        angle10 = angle10 + 0.02;
+        angle11 = angle11 + 0.01;
+     
         /* Close L Group*/
     }
 } 
@@ -365,7 +369,4 @@ function draw() {
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
 }
-function mousePressed() {
-    angle = angle - 40;
-    angle2 = angle2 - 10;
-}
+
