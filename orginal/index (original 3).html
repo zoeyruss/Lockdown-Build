@@ -29,12 +29,14 @@
 	</head>
 
 	<body>
-		<span id="Screen1"></span>
-		<span id="Screen2"></span>
 		<script>
 			IS.create({
-				onInit: () => Screen2(),
-				onChangeState: (state) => Screen1(state),
+				onInit: ({ author, title, width, height, state }) => {
+					Screen2();
+				},
+				onChangeState: (state) => {
+					Screen1();
+				},
 				onResize: ({ width, height }) => {
 					// do something on resize
 				},
