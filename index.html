@@ -8,7 +8,12 @@
 			type="text/javascript"
 			src="libraries/p5.min.js"
 		></script>
-
+		<script
+			class="language lockdown"
+			="javascript"
+			type="text/javascript"
+			src="lockdown-build.js"
+		></script>
 		<script
 			language="javascript"
 			type="text/javascript"
@@ -36,9 +41,7 @@
 		<script>
 			IS.create({
 				onInit: ({ author, title, width, height, state }) => {},
-				onChangeState: (state) => {
-					".lock-down";
-				},
+				onChangeState: (state) => {},
 				onResize: ({ width, height }) => {
 					// do something on resize
 				},
