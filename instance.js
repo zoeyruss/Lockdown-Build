@@ -1,5 +1,3 @@
-
-
 var state = false; 
 
 
@@ -637,9 +635,9 @@ var sketch2 = function (s) {
 	};
 };
 var myp5_3 = new p5();
-var myp5_1 = new p5(s, 'sketch1');
+var myp5_1 = new p5('sketch1');
 
-var myp5_2 = new p5(p, 'sketch2');
+var myp5_2 = new p5('sketch2');
  
 var dispose = IS.create(options);
 

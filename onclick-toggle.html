@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<script
+			language="javascript"
+			type="text/javascript"
+			src="libraries/p5.min.js"
+		></script>
+
+		<style>
+			html {
+				overflow: hidden;
+			}
+
+			body {
+				padding: 0;
+				margin: 0;
+			}
+
+			@font-face {
+				font-family: sharp;
+				src: url(fonts/sharp.otf);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="Screen1"></div>
+		<div id="screen2"></div>
+		<script type="text/javascript" src="https://api.isolation.is"></script>
+		<script
+			language="javascript"
+			type="text/javascript"
+			src="onclicktoggle.js"
+		></script>
+		<script>
+			IS.create({
+				onInit: () => Screen2(),
+
+				onChangeState: (state) => Screen1(state),
+				onResize: ({ width, height }) => {
+					// do something on resize
+				},
+				onTick: ({
+					x,
+					y,
+					width,
+					height,
+					isPointerInside,
+					state,
+					timestamp,
+				}) => {},
+			});
+		</script>
+	</body>
+</html>
