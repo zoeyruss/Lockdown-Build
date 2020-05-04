@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>InstanceMode</title>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"
+		></script>
+		<script type="text/javascript" src="https://api.isolation.is"></script>
+
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"
+		></script>
+
+		<script type="text/javascript" src="instance.js"></script>
+		<style>
+			html {
+				overflow: hidden;
+			}
+
+			body {
+				padding: 0;
+				margin: 0;
+			}
+
+			@font-face {
+				font-family: sharp;
+				src: url(fonts/sharp.otf);
+			}
+		</style>
+	</head>
+
+	<body>
+		<span class="circle" style="background-color: transparent;"></span>
+
+		<span class="circle" style="background-color: transparent;"></span>
+
+		<script>
+			var $circle = document.querySelector(".circle");
+			var myp5_3 = new p5(sketch2);
+			var myp5_3 = new p5(sketch1);
+
+			IS.create({
+				onInit: ({ author, title, width, height, state }) => {
+					$circle.style.backgroundColor = state ? "black" : "transparent";
+				},
+				onChangeState: (state) => {
+					$circle.style.backgroundColor = state ? "black" : "transparent";
+				},
+				onResize: ({ width, height }) => {
+					// do something on resize
+				},
+				onTick: ({
+					x,
+					y,
+					width,
+					height,
+					isPointerInside,
+					state,
+					timestamp,
+				}) => {
+					$circle.style.transform = `translateX(${x}px) translateY(${y}px)`;
+				},
+				onPointerMove: ({ x, y, width, height, isPointerInside, state }) => {
+					// do something on mousemove
+				},
+			});
+		</script>
+	</body>
+</html>

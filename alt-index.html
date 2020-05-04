@@ -2,11 +2,22 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+		<script type="text/javascript" src="https://api.isolation.is"></script>
 		<script
 			language="javascript"
 			type="text/javascript"
 			src="libraries/p5.min.js"
+		></script>
+
+		<script
+			language="javascript"
+			type="text/javascript"
+			src="lockdown-build.js"
+		></script>
+		<script
+			language="javascript"
+			type="text/javascript"
+			src="number-build.js"
 		></script>
 
 		<style>
@@ -27,15 +38,10 @@
 	</head>
 
 	<body>
-		<div id="Screen1"></div>
-		<div id="screen2"></div>
-		<script type="text/javascript" src="https://api.isolation.is"></script>
-		<script language="javascript" type="text/javascript" src="main.js"></script>
 		<script>
 			IS.create({
-				onInit: () => Screen2(),
-
-				onChangeState: (state) => Screen1(state),
+				onInit: ({ author, title, width, height, state }) => {},
+				onChangeState: (state) => {},
 				onResize: ({ width, height }) => {
 					// do something on resize
 				},

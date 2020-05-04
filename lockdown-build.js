@@ -1,4 +1,4 @@
-var L1 = "L";
+var Lt1 = "L";
 var O2 = "O";
 var C3 = "C";
 var K4 = "K";
@@ -7,6 +7,20 @@ var O6 = "O";
 var W7 = "W";
 var N8 = "N";
 var Dashnine = "-";
+
+/* Number forms Varible*/
+var L12 = "12";
+var L11 = "11";
+var L10 = "10";
+var L9 = "9";
+var L8 = "8";
+var L7 = "7";
+var L6 = "6";
+var L5 = "5";
+var L4 = "4";
+var L3 = "3";
+var L2 = "2";
+var L1 = "1";
 
 let myFont;
 let angle = 0;
@@ -18,6 +32,11 @@ let angle5 = 0;
 let angle6 = 0;
 let angle7 = 0;
 let angle8 = 0;
+let angle9 = 0;
+let angle10 = 0;
+let angle11 = 0;
+let angle12 = 0;
+
 
 /* Controls Postion  of Letters*/
 let Pos9 = 0;
@@ -41,7 +60,39 @@ let amountD5 = amountDashnine / 3;
 let amountK4 = amountDashnine / 3.5;
 let amountC3 = amountDashnine / 4;
 let amountO2 = amountDashnine / 4.5;
-let amountL1 = amountDashnine / 5;
+let amountLt1 = amountDashnine / 5;
+/* Controls Postion  of Numbers*/
+let PosL1 = 0;
+let PosL2 = PosL1 - 40;
+let PosL3 = PosL2 - 40;
+let PosL4 = PosL3 - 40;
+let PosL5 = PosL4 - 40;
+let PosL6 = PosL5 - 40;
+let PosL7 = PosL6 - 40;
+let PosL8 = PosL7 - 40;
+let PosL9 = PosL8 - 40;
+let PosL10 = PosL9 - 40;
+let PosL11 = PosL10 - 40;
+let PosL12 = PosL11 - 40;
+
+
+
+
+/* Controls amount of Number Letter forms around circle*/
+let amountL1 = 90;
+let amountL2 = amountL1 / 1.5;
+let amountL3 = amountL1 / 2;
+let amountL4 = amountL1 / 2.5;
+let amountL5 = amountL1 / 3;
+let amountL6 = amountL1 / 3.5;
+let amountL7 = amountL1 / 4;
+let amountL8 = amountL1 / 4.5;
+let amountL9 = amountL1 / 5;
+let amountL10 = amountL1 / 5.5;
+let amountL11 = amountL1 / 6;
+let amountL12 = amountL1 / 6.5;
+
+
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	colorMode(HSB);
@@ -50,9 +101,7 @@ function setup() {
   frameRate(30);
 	textAlign(CENTER, CENTER);
 }
-function mousePressed() {
-		background(233);
-}
+
 function draw() {
 									background(0);
 									fill(255);
@@ -241,7 +290,7 @@ function draw() {
 									/* Close O Group*/
 
 									/* Open L Group*/
-									for (let i = 0; i < 360; i += amountL1) {
+									for (let i = 0; i < 360; i += amountLt1) {
 										push();
 										/* center on canvas*/
 										translate(width / 2, height / 2);
@@ -254,28 +303,29 @@ function draw() {
 										rotate(89.55);
 										translate(0, 0);
 										
-										text(L1, 0, Pos1);
+										text(Lt1, 0, Pos1);
 
 										pop();
 
 										pop();
 									}
-									/* Close L Group*/
-									if (mouseX > 800) {
-										angle = angle + 0.09;
-										angle1 = angle1 + 0.08;
-										angle2 = angle2 + 0.07;
-										angle3 = angle3 + 0.06;
-										angle4 = angle4 + 0.05;
-										angle5 = angle5 + 0.04;
-										angle6 = angle6 + 0.03;
-										angle7 = angle7 + 0.02;
-										angle8 = angle8 + 0.01;
-									}
+	if (mouseX > 800) {
+		angle = angle + 0.09;
+		angle1 = angle1 + 0.08;
+		angle2 = angle2 + 0.07;
+		angle3 = angle3 + 0.06;
+		angle4 = angle4 + 0.05;
+		angle5 = angle5 + 0.04;
+		angle6 = angle6 + 0.03;
+		angle7 = angle7 + 0.02;
+		angle8 = angle8 + 0.01;
+	}								
 }
-                
+function mousePressed() {
+		
 
 
+}
 
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
