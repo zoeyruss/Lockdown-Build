@@ -5,17 +5,14 @@
 		<title>InstanceMode</title>
 		<script
 			type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"
-		></script>
+			src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
 		<script type="text/javascript" src="https://api.isolation.is"></script>
 
 		<script
 			type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"
-		></script>
+			src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
 
-		<script type="text/javascript" src="instance.js"></script>
-		<style>
+		<script type="text/javascript" src="instance.js"></script><style>
 			html {
 				overflow: hidden;
 			}
@@ -36,11 +33,9 @@
 		<div id="sketch1"></div>
 
 		<div id="sketch2"></div>
-
 		<script>
 			var myp5_1 = new p5(sketch2);
 			var myp5_2 = new p5(sketch1);
-
 			IS.create({
 				onInit: (data) => {
 					myp5_1;
