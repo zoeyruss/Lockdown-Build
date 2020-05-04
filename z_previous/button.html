@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<script type="text/javascript" src="https://api.isolation.is"></script>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			html {
+				overflow: hidden;
+			}
+
+			.circle {
+				position: relative;
+				display: block;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				margin-left: -25px;
+				margin-top: -25px;
+				border: 2px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<span
+			class="circle"
+			style="
+				background-color: transparent;
+				transform: translateX(628px) translateY(411px);
+			"
+		></span>
+
+		<script>
+			var $circle = document.querySelector(".circle");
+
+			IS.create({
+				onInit: ({ author, title, width, height, state }) => {
+					$circle.style.backgroundColor = state ? "black" : "transparent";
+				},
+				onChangeState: (state) => {
+					$circle.style.backgroundColor = state ? "blue" : "transparent";
+				},
+				onResize: ({ width, height }) => {
+					// do something on resize
+				},
+				onTick: ({
+					x,
+					y,
+					width,
+					height,
+					isPointerInside,
+					state,
+					timestamp,
+				}) => {
+					$circle.style.transform = `translateX(${x}px) translateY(${y}px)`;
+				},
+				onPointerMove: ({ x, y, width, height, isPointerInside, state }) => {
+					// do something on mousemove
+				},
+			});
+		</script>
+	</body>
+</html>

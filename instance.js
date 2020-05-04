@@ -1,5 +1,7 @@
 
 
+var state = false; 
+
 
 var sketch1 = function (p) {
 p.L12 = "12";
@@ -30,17 +32,17 @@ p.angle11 = 0;
 p.angle12 = 0;
 
 p.PosL1 = 0;
-p.PosL2 = p.PosL1 - 40;
-p.PosL3 = p.PosL2 - 40;
-p.PosL4 = p.PosL3 - 40;
-p.PosL5 = p.PosL4 - 40;
-p.PosL6 = p.PosL5 - 40;
-p.PosL7 = p.PosL6 - 40;
-p.PosL8 = p.PosL7 - 40;
-p.PosL9 = p.PosL8 - 40;
-p.PosL10 = p.PosL9 - 40;
-p.PosL11 = p.PosL10 - 40;
-p.PosL12 = p.PosL11 - 40;
+p.PosL2 = p.PosL1 - 30;
+p.PosL3 = p.PosL2 - 30;
+p.PosL4 = p.PosL3 - 30;
+p.PosL5 = p.PosL4 - 30;
+p.PosL6 = p.PosL5 - 30;
+p.PosL7 = p.PosL6 - 30;
+p.PosL8 = p.PosL7 - 30;
+p.PosL9 = p.PosL8 - 30;
+p.PosL10 = p.PosL9 - 30;
+p.PosL11 = p.PosL10 - 30;
+p.PosL12 = p.PosL11 - 30;
 p.amountL1 = 90;
 
     p.amountL2 = p.amountL1 / 1.5;
@@ -387,14 +389,14 @@ var sketch2 = function (s) {
 
 	/* Controls s.Postion  of ters*/
 	s.Pos9 = 0;
-	s.Pos8 = s.Pos9 - 55;
-	s.Pos7 = s.Pos8 - 55;
-	s.Pos6 = s.Pos7 - 55;
-	s.Pos5 = s.Pos6 - 55;
-	s.Pos4 = s.Pos5 - 55;
-	s.Pos3 = s.Pos4 - 55;
-	s.Pos2 = s.Pos3 - 55;
-	s.Pos1 = s.Pos2 - 55;
+	s.Pos8 = s.Pos9 -45;
+	s.Pos7 = s.Pos8 -45;
+	s.Pos6 = s.Pos7 -45;
+	s.Pos5 = s.Pos6 -45;
+	s.Pos4 = s.Pos5 -45;
+	s.Pos3 = s.Pos4 -45;
+	s.Pos2 = s.Pos3 -45;
+	s.Pos1 = s.Pos2 -45;
 
 	/* Controls s.amount of ter forms around circle*/
 	s.amountDashnine = 90;
@@ -635,7 +637,12 @@ var sketch2 = function (s) {
 	};
 };
 var myp5_3 = new p5();
+var myp5_1 = new p5(s, 'sketch1');
 
-var myp5_1 = new p5(sketch1);
+var myp5_2 = new p5(p, 'sketch2');
+ 
+var dispose = IS.create(options);
 
-var myp5_2 = new p5(sketch2);
+dispose();
+
+dispose = IS.create(options);

@@ -33,39 +33,24 @@
 	</head>
 
 	<body>
-		<span class="circle" style="background-color: transparent;"></span>
+		<div id="sketch1"></div>
 
-		<span class="circle" style="background-color: transparent;"></span>
+		<div id="sketch2"></div>
 
 		<script>
-			var $circle = document.querySelector(".circle");
-			var myp5_3 = new p5(sketch2);
-			var myp5_3 = new p5(sketch1);
+			var myp5_1 = new p5(sketch2);
+			var myp5_2 = new p5(sketch1);
 
 			IS.create({
-				onInit: ({ author, title, width, height, state }) => {
-					$circle.style.backgroundColor = state ? "black" : "transparent";
+				onInit: (data) => {
+					myp5_1;
 				},
-				onChangeState: (state) => {
-					$circle.style.backgroundColor = state ? "black" : "transparent";
+				onChangeState: (data) => {
+					myp5_2;
 				},
-				onResize: ({ width, height }) => {
-					// do something on resize
-				},
-				onTick: ({
-					x,
-					y,
-					width,
-					height,
-					isPointerInside,
-					state,
-					timestamp,
-				}) => {
-					$circle.style.transform = `translateX(${x}px) translateY(${y}px)`;
-				},
-				onPointerMove: ({ x, y, width, height, isPointerInside, state }) => {
-					// do something on mousemove
-				},
+				onResize: (data) => {},
+				onTick: (data) => {},
+				onPointerMove: (data) => {},
 			});
 		</script>
 	</body>
